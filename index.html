@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- título da aba da página: -->
+    <title>FlexBlog</title>
+    <!-- para conseguir entender os acentos: -->
+    <meta charset="UTF-8">
+    <!-- para funcionar no browser edge, pois ele não suporta o doctype para HTML5: -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- para o responsivo funcionar direito (é pra quando for para o mobile, as medias queries funcionem): -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- link das fontes (nunito): -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- link do css: -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- barra acima do header com algumas informações essenciais -->
+    <!-- div que vai pegar 100% do conteúdo -->
+    <div class="superinfo-bg">
+        <!-- div dentro da div pai que pega os itens -->
+        <div class="superinfo">
+            <p>Seg / Sex - 8:00 às 18:00</p>
+            <a href="tel:+552199999999">+55 11 9999-9999</a>
+            <p>Av. Ali Perto, São Paulo - SP</p>
+        </div>
+    </div>
+
+    <!-- header da página -->
+    <!-- vai pegar 100% do conteúdo -->
+    <header class="menu-bg">
+        <!-- div que vai pegar o tamanho que eu quero e que vai ter os itens dentro -->
+        <div class="menu">
+            <!-- div que pega apenas o logo -->
+            <div class="menu-logo">
+                <a href="/">FlexBlog</a>
+            </div>
+            <!-- parte onde terá as outras informações do header (tirando o logo) -->
+            <nav class="menu-nav">
+                <!-- geralmente o header é uma lista -->
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#preco">Preço</a></li>
+                    <li><a href="#qualidade">Qualidade</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- título principal da página -->
+    <h1 class="introducao">Novos valores e<br>Propriedades de CSS</h1>
+
+    <!-- primeira seção do site -->
+    <section class="sobre" id="sobre">
+        <!-- div que vai conter os textos -->
+        <div class="sobre-info">
+            <!-- título principal da seção -->
+            <h1>Sobre</h1>
+            <!-- primeiro texto da seção "sobre" -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente apropriadas objetivos.</p>
+            <!-- segundo texto da seção "sobre" -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente apropriadas objetivos.</p>
+        </div>
+        
+        <!-- div que vai conter uma imagem da seção "sobre" -->
+        <div class="sobre-img">
+            <img src="assets/img/sobre1.jpg" alt="Sobre 1">
+        </div>
+        <!-- div que vai conter uma imagem da seção "sobre" -->
+        <div class="sobre-img">
+            <img src="assets/img/sobre2.jpg" alt="Sobre 2">
+        </div>
+    </section>
+
+    <!-- segunda seção do site -->
+    <section class="produtos" id="produtos">
+        <!-- o título ficará fora da div "produtos-container" pois não será um flex-item -->
+        <!-- título principal da seção -->
+        <h1>Produtos</h1>
+
+        <!-- div pai que vai conter as divs dos produtos -->
+        <div class="produtos-container">
+            <!-- a classe "produtos-item" vai ser colocada para todos os produtos dessa seção e nela será colocada as informações padrão dessas divs -->
+            <!-- div que vai conter um produto -->
+            <!-- a classe "purple" será para deixar esse produto único -->
+            <div class="produtos-item purple">
+                <h2>Purple</h2>
+                <img src="assets/img/produtos1.jpg" alt="Produtos 1">
+            </div>
+            <!-- a classe "pink" será para deixar esse produto único -->
+            <div class="produtos-item pink">
+                <h2>Pink</h2>
+                <img src="assets/img/produtos2.jpg" alt="Produtos 2">
+            </div>
+            <!-- a classe "blue" será para deixar esse produto único -->
+            <div class="produtos-item blue">
+                <h2>Blue</h2>
+                <img src="assets/img/produtos3.jpg" alt="Produtos 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- terceira seção do site -->
+    <section class="preco" id="preco">
+        <!-- div que vai conter as informações dos preços -->
+        <div class="preco-item">
+            <h2>Cobre</h2>
+            <span><sup>R$</sup>19</span>
+
+            <!-- aqui será a lista de benefícios desse plano -->
+            <ul>
+                <li>Planos Ilimitados</li>
+                <li>Acesso Restrito</li>
+                <li>Conteúdo Secreto</li>
+                <li>Suporte 24h</li>
+            </ul>
+            <!-- botão de comprar -->
+            <a href="/">Comprar</a>
+        </div>
+
+        <!-- div que vai conter as informações dos preços -->
+        <div class="preco-item">
+            <h2>Prata</h2>
+            <span><sup>R$</sup>39</span>
+
+            <!-- aqui será a lista de benefícios desse plano -->
+            <ul>
+                <li>Planos Ilimitados</li>
+                <li>Acesso Restrito</li>
+                <li>Conteúdo Secreto</li>
+                <li>Suporte 24h</li>
+                <li>Compra Exclusiva</li>
+            </ul>
+            <!-- botão de comprar -->
+            <a href="/">Comprar</a>
+        </div>
+
+        <!-- div que vai conter as informações dos preços -->
+        <div class="preco-item">
+            <h2>Ouro</h2>
+            <span><sup>R$</sup>79</span>
+
+            <!-- aqui será a lista de benefícios desse plano -->
+            <ul>
+                <li>Planos Ilimitados</li>
+                <li>Acesso Restrito</li>
+                <li>Conteúdo Secreto</li>
+                <li>Suporte 24h</li>
+                <li>Compra Exclusiva</li>
+                <li>Download dos Itens</li>
+            </ul>
+            <!-- botão de comprar -->
+            <a href="/">Comprar</a>
+        </div>
+    </section>
+
+    <!-- quarta seção do site -->
+    <section class="qualidade" id="qualidade">
+        <!-- a classe "qualidade-item" vai ser colocada para as divs dessa seção e nela será colocada as informações padrão dessas divs -->
+        <div class="qualidade-item">
+            <!-- título da qualidade -->
+            <h2>Inteligente</h2>
+            <!-- texto da qualidade Inteligente -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão</p>
+        </div>
+
+        <div class="qualidade-item">
+            <!-- título da qualidade -->
+            <h2>Compacto</h2>
+            <!-- texto da qualidade Compacto -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente</p>
+        </div>
+        
+        <div class="qualidade-item">
+            <!-- título da qualidade -->
+            <h2>Econômico</h2>
+            <!-- texto da qualidade Econômico -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão</p>
+        </div>
+
+        <div class="qualidade-item">
+            <!-- título da qualidade -->
+            <h2>Transparente</h2>
+            <!-- texto da qualidade Transparente -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão</p>
+        </div>
+
+        <div class="qualidade-item">
+            <!-- título da qualidade -->
+            <h2>Opaco</h2>
+            <!-- texto da qualidade Opaco -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão das condições inegavelmente</p>
+        </div>
+
+        <div class="qualidade-item">
+            <!-- título da qualidade -->
+            <h2>Sustentável</h2>
+            <!-- texto da qualidade Sustentável -->
+            <p>O que temos que ter sempre em mente é que a determinação clara de objetivos afeta positivamente a correta previsão</p>
+        </div>
+    </section>
+
+    <!-- quinta seção do site -->
+    <section class="newsletter">
+        <!-- div que vai conter o conteúdo -->
+        <div class="newsletter-info">
+            <!-- título principal da seção -->
+            <h1>Newsletter</h1>
+            <!-- texto da seção -->
+            <p>assine e fique por dentro das novidades</p>
+        </div>
+
+        <!-- onde vai ficar o input onde consegue colocar o email -->
+        <form class="newsletter-form">
+            <!-- input onde consegue colocar o email -->
+            <input type="text" placeholder="Seu e-mail">
+            <!-- botão que envia a informação do input -->
+            <button type="submit">Assinar</button>
+        </form>
+    </section>
+
+    <!-- footer do site -->
+    <footer class="footer">
+        <p>FlexBlog © Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

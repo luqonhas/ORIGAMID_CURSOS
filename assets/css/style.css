@@ -1,0 +1,499 @@
+/* RESET */
+
+/* reseta algumas informações */
+body, h1, h2, p, ul, li, a{
+    /* tira as margens padrão (deixa as coisas mais coladas) */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* atribui novas configurações para o body */
+body{
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    color: #222222;
+}
+
+/* aqui remove os estilos das listas */
+ul{
+    list-style: none;
+}
+
+/* aqui remove o text-decoration */
+a{
+    text-decoration: none;
+}
+
+/* atribui novas configurações para as img */
+img{
+    /* faz com que todas as imagens sejam display: block */
+    display: block;
+    /* faz com que tenham uma largura máxima de 100% para que elas não estourem o container (ajuda na responsividade) */
+    max-width: 100%;
+}
+
+/* atribui à todas as tags do site um nova configuração */
+*{
+    /* não entendi */
+    box-sizing: border-box;
+}
+
+
+
+/* SUPERINFO */
+
+/* altera o fundo e a cor das letras da div do superinfo-bg */
+.superinfo-bg{
+    background: #122ab2;
+    color: white;
+}
+
+/* estilizando o superinfo (onde fica todo o conteúdo) */
+.superinfo{
+    /* define que o superinfo terá uma largura máxima de 960px */
+    max-width: 960px;
+    /* alinhando ao centro (zero pra cima, zero pra baixo e automático para os lados) */
+    margin: 0 auto;
+    /* muda o display de todos os itens do superinfo (os <p> eram display: block e o <a> era display: inline) */
+    display: flex;
+    /* para conseguir separar os três itens com distâncias iguais */
+    justify-content: space-between;
+    /* para fazer os itens pararem de quebrar entre si e começar a quebrar para a próxima linha */
+    flex-wrap: wrap;
+    /* criar um espaçamento em cima dos itens para não ficar grudado */
+    padding-top: 10px;
+}
+
+/* para cada um dos itens do superinfo */
+.superinfo p, .superinfo a{
+    /* cria uma margem neles (zero pra cima e 10px para os outros lados) */
+    margin: 0px 10px 10px 10px;
+}
+
+/* altera a cor dos links no superinfo */
+.superinfo a{
+    color: white;
+}
+
+
+
+/* MENU */
+
+/* altera o fundo e a cor das letras da div do menu-bg */
+.menu-bg{
+    background: #2c70ff;
+}
+
+.menu{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    /* deixa o <a> de "FlexBlog" e o <nav> com display: flex (ou seja, as coisas dentro de <nav> ainda estão como display: block) */
+    display: flex;
+    /* faz quebrar a linha */
+    flex-wrap: wrap;
+    /* para alinhar o nome "FlexBlog" em uma ponta e o <nav> na outra ponta */
+    justify-content: space-between;
+    /* para alinhar os itens no meio */
+    align-items: center;
+}
+
+.menu a{
+    color: white;
+}
+
+.menu-logo a{
+    /* 36px dividido pela base, que é 16px (padrão do browser) */
+    /* 36px / 16px = 2.25em */
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-nav ul{
+    /* agora podemos transformar os itens dentro do <nav> e dentro do <ul> em display: flex */
+    display: flex;
+    /* para os itens irem para baixo quando for quebrar a linha */
+    flex-wrap: wrap;
+}
+
+.menu-nav a{
+    /* 20px / 16px = 1.25em */
+    font-size: 1.25em;
+    /* o <a> por padrão é um display: inline, mas queremos influenciar no padding deles, por isso vamos ter que colocar o display: block */
+    display: block;
+    /* 10px para os lados */
+    padding: 10px;
+}
+
+.menu-nav a:hover{
+    color: #122ab2;
+}
+
+
+
+/* INTRODUÇÃO */
+
+.introducao{
+    /* 48px / 16px = 3em */
+    font-size: 3em;
+    /* para tirar o espaçamento entre linhas e ficar mais grudadinho */
+    line-height: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 10px;
+}
+
+
+
+/* SOBRE */
+
+.sobre{
+    border-top: 2px solid #2c70ff;
+    border-bottom: 2px solid #2c70ff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 0;
+    /* tranforma todos os itens dentro do sobre em display: flex */
+    display: flex;
+    /* para que quebre a linha */
+    flex-wrap: wrap;
+}
+
+.sobre-info{
+    /* faz flex-grow: 2, flex-shrink: 1, flex-basis: 0 */
+    /* queremos que o texto ocupe 2x mais do que as imagens */
+    /* definindo um mínimo até onde pode diminuir até quebrar */
+    /* o tamanho do conteúdo é de +- 460px, podemos fazer ele diminuir até +- 300px */
+    flex: 2 1 300px; /* pode ser também flex: 2 1 0; */
+    margin: 0 10px;
+}
+
+.sobre-info h1{
+    /* 48px / 16px = 3em */
+    font-size: 3em;
+    /* pra criar uma margem entre o título e o texto */
+    margin-bottom: .5em;
+}
+
+.sobre-info p{
+    /* 20px / 16px = 1.25em */
+    font-size: 1.25em;
+    line-height: 1.4;
+    margin-bottom: 1em;
+    color: #7c7c7c;
+}
+
+/* classe das divs que contém as imagens */
+.sobre-img{
+    /* como o texto ocupa 2x mais que as imagens, elas terão flex: 1; */
+    /* definindo um mínimo até onde pode diminuir até quebrar */
+    /* o tamanho das imagens é de +- 220px, podemos fazer ele diminuir até  +- 160px */
+    flex: 1 1 160px;
+    margin: 0 10px; 
+}
+
+
+
+/* PRODUTOS */
+
+.produtos{
+    max-width: 960px;
+    margin: 60px auto;
+}
+
+.produtos h1{
+    font-size: 3em;
+    margin: 0 10px 60px 10px;
+}
+
+.produtos-container{
+    display: flex;
+    flex-wrap: wrap;
+    /* para que todos os itens se alinhem para o final, nesse caso, para baixo */
+    align-items: flex-end;
+}
+
+.produtos-item{
+    /* faz com que as imagens ocupem 1x o espaço das outras dentro do container */
+    /* definindo um mínimo no flex-basis dentro do flex até onde pode diminuir até quebrar */
+    flex: 1 1 175px;
+    margin: 10px;
+}
+
+.produtos-item h2{
+    /* 48px / 16px = 3em */
+    font-size: 3em;
+    color: #a4a4a4;
+    background: #f7f7f7;
+    /* 60px para cima e baixo, 20px para os lados */
+    padding: 60px 20px;
+}
+
+.purple{
+    /* para colocar a linha em cima das legendas */
+    border-top: 8px solid #ae81ff;
+}
+
+.pink{
+    /* para colocar a linha em cima das legendas */
+    border-top: 8px solid #f9265e;
+}
+
+.blue{
+    /* para colocar a linha em cima das legendas */
+    border-top: 8px solid #66d9eb;
+}
+
+
+
+/* PREÇOS */
+
+.preco{
+    background: #f7f7f7;
+    /* 60px para cada lado, isso é para que os itens consigam se expander o máximo possível deles */
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.preco-item{
+    flex: 1 1 260px;
+    border: 4px solid white;
+    padding: 20px;
+    margin: 10px;
+    /* ao invés de colocar o min-width: 260px, podemos colocar isso no flex-basis no flex */
+    /* min-width: 260px; */
+}
+
+.preco-item h2{
+    /* 48px / 16px = 3em */
+    font-size: 3em;
+    color: #a4a4a4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preco-item span{
+    /* define uma largura máxima para o <span> (R$) */
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    /* 48px / 16px = 3em */
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0 5px 0;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+.preco-item sup{
+    /* se colocar "em" o tamanho vai continuar igual ao tamanho do pai, que é o <span>, porém se colocarmos "rem" o 'r' é de relativo ao tamanho do pai */
+    font-size: 1.5rem;
+}
+
+.preco-item ul{
+    max-width: 300px;
+    margin: 20px auto;
+    /* 20px / 16px = 1.25em */
+    font-size: 1.25em;
+    font-style: italic;
+    color: #7c7c7c;
+}
+
+.preco-item li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.preco-item li::after{
+    /* podemos escrever qualquer coisa e vai aparecer depois do texto do "li" */
+    content: '';
+    display: block;
+    /* para ser uma bolinha de 6x6 */
+    width: 6px;
+    height: 6px;
+    background: #2c70ff;
+    border-radius: 50%;
+}
+
+.preco-item a{
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: bold;
+    /* 36px / 16px = 2.25em */
+    font-size: 2.25em;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* media query para diminuir os paddings quando for diminuir a tela */
+/* media query para mudar a ordem dos planos no mobile, mostrando o plano que mais te interessa com que o usuário compre */
+@media(max-width: 800px){
+    .preco{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    /* chama o item 3 para ser o primeiro plano para aparecer */
+    .preco .preco-item:nth-child(3){
+        order: -2;
+    }
+    /* chama o item 2 para ser o segundo plano para aparecer */
+    .preco .preco-item:nth-child(2){
+        order: -1;
+    }
+}
+
+
+
+/* QUALIDADE */
+
+.qualidade{
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item{
+    flex: 1 1 300px;
+    margin: 20px 10px;
+}
+
+.qualidade-item h2{
+    /* 36px / 16px = 2.25em */
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background: blue;
+}
+
+/* o 3n+1 quero que o 1 seja selecionado e quero que depois de 3 itens também seja selecionado */
+.qualidade-item:nth-of-type(3n+1) h2::before{
+    background: #ae81ff;
+}
+
+/* o 3n+1 quero que o 2 seja selecionado e quero que depois de 3 itens também seja selecionado */
+.qualidade-item:nth-of-type(3n+2) h2::before{
+    background: #f9265e;
+}
+
+/* o 3n+1 quero que o 3 seja selecionado e quero que depois de 3 itens também seja selecionado */
+.qualidade-item:nth-of-type(3n+3) h2::before{
+    background: #66d9eb;
+}
+
+.qualidade-item p{
+    /* 20px / 16px = 1.25em */
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
+}
+
+
+
+/* NEWSLETTER */
+
+/* background junto sem precisar de outra div dentro de div */
+.newsletter{
+    background: #f7f7f7;
+    /* calcular para conseguirmos mexer nos itens com background */
+    padding: 60px calc((100% - 960px) / 2);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-info{
+    flex: 1 1 260px;
+    margin: 0 10px;
+}
+
+.newsletter-info h1{
+    /* 48px / 16px = 3em */
+    font-size: 3em;
+    color: #a4a4a4;
+}
+
+.newsletter-info p{
+    /* 20px / 16px = 1.25em */
+    font-size: 1.25em;
+    font-style: italic;
+    max-width: 220px;
+    color: #7c7c7c;
+    margin-bottom: 10px;
+}
+
+.newsletter-form{
+    flex: 2 1 260px;
+    margin: 0 10px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input{
+    flex: 3 1 200px;
+    /* 20px / 16px = 1.25em */
+    font-size: 1.25em;
+    color: #7c7c7c;
+    font-style: italic;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    border: 4px solid #2c70ff;
+    background: transparent;
+    padding: 15px 10px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.newsletter-form button{
+    flex: 1 1 200px;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    /* 36px / 16px = 2.25em */
+    font-size: 2.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #2c70ff;
+    color: white;
+    margin: 0px;
+    cursor: pointer;
+    border: 0px;
+    padding: 15px 10px;
+}
+
+/* media query para diminuir a fonte do botão quando chegar na largura de 600px */
+@media (max-width: 600px){
+    .newsletter-form button{
+        font-size: 1.5em;
+    }
+}
+
+/* FOOTER */
+
+.footer{
+    height: 200px;
+    display: flex;
+    background: #2c70ff;
+    align-items: center;
+}
+
+.footer p{
+    flex: 1;
+    text-align: center;
+    font-size: 2.25em;
+    color: #122ab2;
+}
