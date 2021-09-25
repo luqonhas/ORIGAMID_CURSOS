@@ -1,2 +1,2 @@
 # ORIGAMID_FLEXBLOG
-Projeto de HTML & CSS (display: flex) do curso ORIGAMID chamado "FlexBlog".
+Estudos/Anotações dos cursos do Origamid.
