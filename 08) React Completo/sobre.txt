@@ -1,1 +1,0 @@
-Neste curso você irá aprender como desenvolverum aplicativo com React zero
