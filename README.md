@@ -1,6 +1,6 @@
 <h2 align="left">
     <img alt="Origamid" src="origamid.png" width="700px" />
-    <p style="font-size: 14px;">Estudos/Anotações Origamid</p>
+    <p style="font-size: 14px;">Estudos/Anotações Origamid!</p>
 </h2>
 
 <p>Legenda: ⬜ falta concluir, ✔️ concluido, 🚧 em andamento, 🛑 em pausa </p>
